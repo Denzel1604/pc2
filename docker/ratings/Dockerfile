@@ -2,8 +2,8 @@ FROM node:12.18.1-slim
 
 WORKDIR /opt/microservices
 
-COPY /product-page/pc2/bookinfo/src/ratings/package.json .
-COPY /product-page/pc2/bookinfo/src/ratings/ratings.js .
+COPY pc2/bookinfo/src/ratings/package.json .
+COPY pc2/bookinfo/src/ratings/ratings.js .
 
 ENV SERVICE_VERSION v1
 

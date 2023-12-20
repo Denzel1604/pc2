@@ -2,7 +2,7 @@ FROM ruby:2.7.1-slim
 
 WORKDIR /opt/microservices
 
-COPY /product-page/pc2/bookinfo/src/details/details.rb .
+COPY /pc2/bookinfo/src/details/details.rb .
 
 ENV SERVICE_VERSION v1
 ENV ENABLE_EXTERNAL_BOOK_SERVICE true
