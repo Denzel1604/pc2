@@ -18,10 +18,10 @@ sudo apt install python3-pip
 
 2. Clonamos repositorio de CDPS:
 ```
-git clone https://github.com/CDPS-ETSIT/practica_creativa2.git
+git clone https://github.com/Denzel1604/pc2.git
 ```
 ```
-cd practica_creativa2/
+cd pc2/
 ```
 3. Corregimos versiones e instalamos el requirements.txt 
 - gevent==23.9.1
@@ -54,12 +54,79 @@ sudo apt install docker.io
 sudo apt install docker-compose
 ```
 
-2. Definimos fichero Dockerfile en el directorio productpage
+2. Obtenemos el fichero Dockerfile
+```
+git clone https://github.com/Denzel1604/pc2.git
+```
+```
+cp pc2/docker/productpage/Dockerfile .
+```
+```
+rm -rf pc2/
+```
+
+
 3. Montamos fichero Dockerfile
 ```
-docker build -t 09/product-page .
+sudo docker build -t 09/product-page .
 ```
 ```
-docker run -p 9080:9080 09/product-page
+sudo docker run -p 9080:9080 09/product-page
 ```
-4. 
+
+
+## 3. Segmentación de una aplicación monolítica en microservicios utilizando docker-compose ( 2 puntos)
+
+1. Montamos cada imagen Dockerfile
+```
+git clone https://github.com/Denzel1604/pc2.git
+```
+
+Details
+```
+cp pc2/docker/details/Dockerfile .
+```
+```
+sudo docker build -t 09/details .
+```
+
+Ratings
+```
+cp pc2/docker/ratings/Dockerfile .
+```
+```
+sudo docker build -t 09/ratings .
+```
+
+Reviews
+
+```
+cd pc2/bookinfo/src/
+```
+```
+sudo docker run --rm -u root -v "$(pwd)":/home/gradle/project -w /home/gradle/project gradle:4.8.1 gradle clean build
+```
+```
+cd reviews/reviews-wlpcfg
+```
+```
+sudo docker build -t 09/reviews .
+```
+```
+cd 
+```
+
+2. Obtenemos el fichero docker-compoes.yaml
+
+```
+cp pc2/docker/docker-compose.yaml .
+```
+```
+rm -rf pc2/
+```
+
+3. Lanzamos docker-compose
+
+```
+sudo docker-compose up -d
+```
