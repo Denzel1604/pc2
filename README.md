@@ -110,15 +110,15 @@ sudo docker run --rm -u root -v "$(pwd)":/home/gradle/project -w /home/gradle/pr
 cd reviews-wlpcfg
 ```
 ```
-sudo docker build -t 09/reviews:v1 --build-arg service_version=v1 --build-arg enable_ratings=true  .
+sudo docker build -t 09/reviews:v1 --build-arg service_version=v1 --build-arg enable_ratings=false  .
 ```
 
 ```
-sudo docker build -t 09/reviews:v2 --build-arg service_version=v2 --build-arg enable_ratings=true  .
+sudo docker build -t 09/reviews:v2 --build-arg service_version=v2 --build-arg enable_ratings=true --build-arg star_color=black  .
 ```
 
 ```
-sudo docker build -t 09/reviews:v3 --build-arg service_version=v3 --build-arg enable_ratings=true  .
+sudo docker build -t 09/reviews:v3 --build-arg service_version=v3 --build-arg enable_ratings=true --build-arg star_color=red  .
 ```
 
 ```
