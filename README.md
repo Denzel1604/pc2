@@ -101,17 +101,26 @@ sudo docker build -t 09/ratings .
 Reviews
 
 ```
-cd pc2/bookinfo/src/
+cd pc2/bookinfo/src/reviews
 ```
 ```
 sudo docker run --rm -u root -v "$(pwd)":/home/gradle/project -w /home/gradle/project gradle:4.8.1 gradle clean build
 ```
 ```
-cd reviews/reviews-wlpcfg
+cd reviews-wlpcfg
 ```
 ```
-sudo docker build -t 09/reviews .
+sudo docker build -t 09/reviews:v1 --build-arg service_version=v1 --build-arg enable_ratings=true  .
 ```
+
+```
+sudo docker build -t 09/reviews:v2 --build-arg service_version=v2 --build-arg enable_ratings=true  .
+```
+
+```
+sudo docker build -t 09/reviews:v3 --build-arg service_version=v3 --build-arg enable_ratings=true  .
+```
+
 ```
 cd 
 ```
