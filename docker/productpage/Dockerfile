@@ -13,4 +13,4 @@ RUN pip3 install -r pc2/bookinfo/src/productpage/requirements.txt
 ## para la comunicacion entre containers (y solo tenemos uno)
 #EXPOSE 9080
 
-CMD ["python3", "pc2/bookinfo/src/productpage/productpage_monolith.py", "9080"]
+CMD ["python3", "pc2/bookinfo/src/productpage/productpage.py", "9080"]
