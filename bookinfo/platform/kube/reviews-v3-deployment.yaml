@@ -19,7 +19,7 @@ spec:
     spec:
       containers:
       - name: reviews
-        image: stehedor/09_reviews-v3
+        image: stehedor/09_reviews:v3
         imagePullPolicy: IfNotPresent
         env:
         - name: LOG_DIR
