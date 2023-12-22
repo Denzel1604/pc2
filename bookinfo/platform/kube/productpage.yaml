@@ -38,7 +38,7 @@ spec:
     spec:
       containers:
       - name: productpage
-        image: stehedor/09-productpage:seg
+        image: stehedor/09_productpage:seg
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 9080

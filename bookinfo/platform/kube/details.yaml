@@ -36,7 +36,7 @@ spec:
     spec:
       containers:
       - name: details
-        image: stehedor/09-details
+        image: stehedor/09_details
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 9080
